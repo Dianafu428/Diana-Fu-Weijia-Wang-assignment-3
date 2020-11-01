@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+     font{
+          color:"#FF0000";
+         }
+</style>
+<h2 align="center">Your search place name is is  <font color="#FF0000">{{place_name}}</font> , and the lat and lng of this place is <font color="#FF0000">{{lat}},{{lng}}</font>,</h2>
+<h2 align="center">
+    {% if name==none %}
+        the nearest stop  <font color="#FF0000">does not exist in 5 miles</font>,
+    {% else %}
+        the nearest stop is <font color="#FF0000">{{name}}</font>,
+    {% endif %}
+{% if wheelchair_boarding==1 %}
+and wheelchair is <font color="#FF0000">accessible</font>.
+{% endif %}
+{% if wheelchair_boarding==2 %}
+and wheelchair is <font color="#FF0000">inaccessible</font>.
+{% endif %}
+{% if wheelchair_boarding==0 %}
+and wheelchair  accessible is <font color="#FF0000">unknown</font>.
+{% endif %}</h2>
+
+
+</body>
+</html>
