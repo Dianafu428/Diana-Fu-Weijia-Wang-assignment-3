@@ -1,19 +1,9 @@
-"""
-Simple "Hello, World" application using Flask
-"""
 
-from flask import Flask
 from flask import Flask,render_template,request
 from service import *
 from mbta_helper import *
 
-
 app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
 
 # Homepage
 @app.route("/")
@@ -50,4 +40,3 @@ def nearest():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
